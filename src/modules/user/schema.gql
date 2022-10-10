@@ -1,0 +1,19 @@
+type Query{
+  users(
+    search: String
+    pagination: Pagination
+  ): [User]
+}
+
+type User {
+  user_id: String
+  username: String
+  contact: String
+}
+
+type Mutation {
+  postUser(
+    username: String!,
+    contact: String!
+  ): MutationResponse!
+}

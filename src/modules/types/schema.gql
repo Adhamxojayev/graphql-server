@@ -1,0 +1,10 @@
+
+type MutationResponse {
+  status: Int
+  message: String
+}
+
+input Pagination {
+  page: Int
+  limit: Int
+}
