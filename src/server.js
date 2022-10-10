@@ -14,7 +14,7 @@ import schema from './modules/index.js'
   const app = express();
   const httpServer = http.createServer(app);
 
-  app.get('/posts', (req, res) => res.send({post:1, post: 'hello world'}))
+  app.get('/posts', (req, res) => res.send({postId:1, post: 'hello world'}))
 
   const server = new ApolloServer({
     schema,
