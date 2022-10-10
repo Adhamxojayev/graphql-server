@@ -10,8 +10,8 @@ const GETUSER = async ({search, pagination}) => {
     `select 
         * 
     from users
-    where username ilike concat('%', $1::varchar, '%')
-          or contact ilike concat('%', $1::varchar )
+    where (username ilike concat('%', $1::varchar, '%')
+          or contact ilike concat('%', $1::varchar )) and deleted_at is null
     offset $2 limit $3      
   `,
     [search, (page - 1) * limit, limit]

@@ -23,8 +23,8 @@ import schema from './modules/index.js'
     cache: 'bounded',
     plugins: [
       ApolloServerPluginDrainHttpServer({ httpServer }),
-      ApolloServerPluginLandingPageGraphQLPlayground,
-      // ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+      // ApolloServerPluginLandingPageGraphQLPlayground,
+      ApolloServerPluginLandingPageLocalDefault({ embed: true }),
     ],
   });
 
